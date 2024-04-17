@@ -1,0 +1,118 @@
+<div class="add-serveur-container">
+  <h2>Fiche Serveur</h2>
+  <form [formGroup]="serveurForm">
+    <!-- ID -->
+    <div class="form-group">
+      <div id="idGroup" class="id-group">
+        <div class="type-select">
+          <mat-form-field appearance="fill">
+            <mat-label>ID Type</mat-label>
+            <select matNativeControl [(ngModel)]="selectedType" name="typeSelect" (change)="onTypeChange()">
+              <option value="APP">APP</option>
+              <option value="BDD">BDD</option>
+              <option value="ADM">ADM</option>
+            </select>
+          </mat-form-field>
+        </div>
+        <div class="dash-between">-</div>
+        <div class="id-number">
+          <mat-form-field appearance="fill">
+            <mat-label>ID Number</mat-label>
+            <input matInput type="number" [(ngModel)]="idNumber" name="idNumber" required [min]="minValue" />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>       
+    <div class="form-group">
+      <!-- Statut -->
+      <mat-form-field appearance="fill">
+        <mat-label>Statut</mat-label>
+        <select matNativeControl formControlName="statut" required>
+          <option value="">Sélectionner...</option>
+          <option value="Actif">Actif</option>
+          <option value="Non Actif">Non Actif</option>
+          <option value="EndOfLife">Fin de Vie</option>
+        </select>
+      </mat-form-field>
+    </div>
+    
+    <div class="form-group">
+      <!-- Details -->
+      <label for="details_dns">Détails</label>
+      <input matInput type="text" formControlName="ip" required placeholder="IP" />
+      <input matInput type="text" formControlName="dns" required placeholder="DNS" />
+      <input matInput type="text" formControlName="hostname" required placeholder="Hostname" />
+      <input matInput type="text" formControlName="nature" required placeholder="Nature" />
+      <select matNativeControl formControlName="phy_vm" required>
+        <option value="">Phy / VM</option>
+        <option value="Phy">Phy</option>
+        <option value="Vm">Vm</option>
+      </select>
+      <select matNativeControl formControlName="prod_int_pca" required>
+        <option value="">Prod / Int / PCA</option>
+        <option value="Prod">Prod</option>
+        <option value="Int">Int</option>
+        <option value="PCA">PCA</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <!-- Logiciels -->
+      <label for="logicielsGroup">Logiciels</label>
+      <div id="logicielsGroup" class="logiciels-container">
+        <div class="logiciels-item">
+          <input matInput type="text" formControlName="version" required placeholder="Version" />
+          <input matInput type="number" formControlName="port" required placeholder="Port" />
+          <input matInput type="text" formControlName="path" required placeholder="Path" />
+        </div>
+      </div>
+    </div>
+    
+    <!-- CPU, RAM, Disque -->
+    <mat-form-field appearance="fill">
+      <mat-label>CPU</mat-label>
+      <input matInput type="number" formControlName="cpu" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>RAM</mat-label>
+      <input matInput type="number" formControlName="ram" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Disque</mat-label>
+      <input matInput type="number" formControlName="disc" required />
+    </mat-form-field>
+    <!-- Carte RSX, Système d'exploitation, Services à démarrer -->
+    <mat-form-field appearance="fill">
+      <mat-label>Carte RSX</mat-label>
+      <input matInput type="text" formControlName="carte_rsx" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Système d'exploitation</mat-label>
+      <input matInput type="text" formControlName="os" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Services à démarrer</mat-label>
+      <input matInput type="text" formControlName="services_a_demarrer" required />
+    </mat-form-field>
+    <!-- Flux entrant -->
+    <mat-form-field appearance="fill">
+      <mat-label>Flux entrant</mat-label>
+      <input matInput type="text" formControlName="flux_entrant" placeholder="URL Pour La matrice de flux entrant" required />
+    </mat-form-field>
+    <!-- Flux sortant -->
+    <mat-form-field appearance="fill">
+      <mat-label>Flux sortant</mat-label>
+      <input matInput type="text" formControlName="flux_sortant" placeholder="URL Pour la matrice de flux sortant" required />
+    </mat-form-field>
+    <!-- Accès -->
+    <mat-form-field appearance="fill">
+      <mat-label>Accès</mat-label>
+      <input matInput type="text" formControlName="acces" placeholder="URL Pour La matrice d'accès" required />
+    </mat-form-field>
+    <!-- Save button -->
+    <div class="button-container">
+      <button mat-raised-button color="primary" (click)="onSubmit()">Save</button>
+      <button mat-raised-button color="accent" (click)="closeDialog()">Close</button>
+    </div>
+  </form>
+</div>

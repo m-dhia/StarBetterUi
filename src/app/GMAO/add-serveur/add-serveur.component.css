@@ -1,0 +1,59 @@
+.add-serveur-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top */
+  height: 100%;
+  overflow-y: auto; /* Auto scroll when content overflows */
+  scrollbar-width: thin;
+  max-height: 700px;
+  max-width: 1100px;
+  margin: 20px auto; /* Center the container horizontally */
+  padding: 20px;
+}
+
+
+
+.add-serveur-container h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.add-serveur-container form {
+  width: auto; /* Auto width */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-serveur-container form mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.add-serveur-container form mat-form-field input {
+  border-radius: 20px;
+}
+
+.add-serveur-container form mat-raised-button {
+  margin-right: 10px;
+}
+
+.add-serveur-container form button {
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+  width: 200px;
+}
+
+.add-serveur-container form button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#idGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.type-select, .dash-between, .id-number {
+  flex: 1;
+  margin: 0 5px; /* Adjust spacing between elements */
+}
+

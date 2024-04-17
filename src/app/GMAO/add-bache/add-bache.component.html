@@ -1,0 +1,23 @@
+<!-- add-compresseur.component.html -->
+<div class="add-compresseur-container">
+    <h2>Add Local bache a Eau</h2>
+    <form (ngSubmit)="onSubmit()" [formGroup]="climForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" placeholder="Enter name">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>etat</mat-label>
+        <input matInput formControlName="etat" placeholder="Enter etat">
+      </mat-form-field>
+  
+      
+  
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit">Add</button>
+        <button mat-raised-button color="warn" (click)="closeDialog()">Cancel</button>
+      </div>
+    </form>
+  </div>
+  

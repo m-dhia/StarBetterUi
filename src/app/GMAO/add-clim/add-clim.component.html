@@ -1,0 +1,25 @@
+<!-- add-clim.component.html -->
+<div class="add-clim-container">
+  <h2>Add Clim</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="climForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Enter name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Marche</mat-label>
+      <input matInput formControlName="marche" placeholder="Enter marche">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Soufflage</mat-label>
+      <input matInput formControlName="soufflage" placeholder="Enter soufflage">
+    </mat-form-field>
+
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit">Add</button>
+      <button mat-raised-button color="warn" (click)="closeDialog()">Cancel</button>
+    </div>
+  </form>
+</div>

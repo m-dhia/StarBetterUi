@@ -1,0 +1,184 @@
+.card {
+    width: 350px;
+    height: 350px;
+    background: #E8EAEA;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 800px;
+    margin-top: 100px;
+  }
+  
+  .title, .more {
+    padding: 10px 15px;
+  }
+  
+  .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+  
+  .user__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .user__container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title {
+    font-weight: 900;
+    font-size: 1.3em;
+  }
+  
+  .name {
+    font-weight: 800;
+  }
+  
+  .username {
+    font-size: .9em;
+    color: #64696e;
+  }
+  
+  .image {
+    width: 60px;
+    height: 60px;
+    background: rgb(22,19,70);
+    background: linear-gradient(295deg, rgba(22,19,70,1) 41%, rgba(89,177,237,1) 100%);
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .follow {
+    border: none;
+    border-radius: 25px;
+    background-color: #0f1113;
+    color: white;
+    padding: 8px 15px;
+    font-weight: 700;
+  }
+  
+  .more {
+    display: block;
+    text-decoration: none;
+    color: rgb(29, 155, 240);
+    font-weight: 800;
+  }
+  
+  .user:hover {
+    background-color: #b3b6b6;
+  }
+  
+  .more:hover {
+    background-color: #b3b6b6;
+    border-radius: 0px 0px 15px 15px;
+  }
+  
+  .follow:hover {
+    background-color: #2c3136;
+  }
+
+
+
+  .hey{
+    margin-top: 70px;
+   
+  }
+
+  .card1 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 850px;
+    
+    display: flex;
+    flex-direction: column;
+    margin-left: 550px;
+    margin-top: 100px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .group {
+    position: relative;
+  }
+  
+  .form .group label {
+    font-size: 14px;
+    color: rgb(99, 102, 102);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    transition: all .3s ease;
+  }
+  
+  .form .group input,
+  .form .group textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    outline: 0;
+    width: 100%;
+    background-color: transparent;
+  }
+  
+  .form .group input:placeholder-shown+ label, .form .group textarea:placeholder-shown +label {
+    top: 10px;
+    background-color: transparent;
+  }
+  
+  .form .group input:focus,
+  .form .group textarea:focus {
+    border-color: #3366cc;
+  }
+  
+  .form .group input:focus+ label, .form .group textarea:focus +label {
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    color: #3366cc;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .form .group textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .form button {
+    background-color: #3366cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .form button:hover {
+    background-color: #27408b;
+  }
+  
+  
